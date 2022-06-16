@@ -3,8 +3,10 @@ import 'package:quizapp/constans/app_color.dart';
 import 'package:quizapp/constans/box_settings.dart';
 
 class AnswerBox extends StatelessWidget {
-  const AnswerBox({Key? key, required this.abcdQuest}) : super(key: key);
+  const AnswerBox({Key? key, required this.abcdQuest, required this.answerText})
+      : super(key: key);
   final String abcdQuest;
+  final String answerText;
   @override
   Widget build(BuildContext context) {
     final sizeWitdh = MediaQuery.of(context).size.width;
@@ -29,7 +31,7 @@ class AnswerBox extends StatelessWidget {
             ],
           ),
           Text(
-            'Answer Text!',
+            answerText,
             style: TextStyle(color: questTextColor),
           )
         ],
