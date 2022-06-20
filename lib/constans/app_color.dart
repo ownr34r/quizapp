@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-final Color mainColor = Color.fromARGB(255, 64, 41, 130);
-final Color startBtnColor = Color.fromARGB(255, 169, 108, 46);
-final Color questTableColor = Color.fromARGB(67, 112, 41, 130);
-final Color questTextColor = Color.fromARGB(255, 251, 255, 0);
-final mainColor1 = LinearGradient(
+const Color mainColor = Color.fromARGB(255, 64, 41, 130);
+const Color startBtnColor = Color.fromARGB(255, 169, 108, 46);
+const Color questTableColor = Color.fromARGB(0, 0, 0, 0);
+const Color questTextColor = Color.fromARGB(255, 251, 255, 0);
+const mainColor1 = LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.bottomRight,
   colors: <Color>[

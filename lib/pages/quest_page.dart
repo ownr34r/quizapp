@@ -19,6 +19,7 @@ class QuestPage extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(gradient: mainColor1),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             Container(
               padding: EdgeInsets.all(15),
@@ -26,11 +27,54 @@ class QuestPage extends StatelessWidget {
               height: sizeHeight,
               width: sizeWitdh,
               decoration: questAndAnswerStyle,
-              child: Center(
-                child: Text(
-                  'Этот писатель XIX века, по общему мнению, является родоначальником целых трех жанров мировой литературы. Он создал научную фантастику, детектив и жанр ужасов. Кто он?!!!',
-                  style: TextStyle(color: questTextColor),
-                ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Center(
+                    child: Text(
+                      'Этот писатель XIX века, по общему мнению, является родоначальником целых трех жанров мировой литературы. Он создал научную фантастику, детектив и жанр ужасов. Кто он?!!!',
+                      style: TextStyle(color: questTextColor),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      ElevatedButton(
+                        style: ButtonStyle(
+                          overlayColor: MaterialStateProperty.all(Colors.red),
+                        ),
+                        onPressed: () {},
+                        child: Column(
+                          children: [
+                            Icon(Icons.next_plan, color: questTextColor),
+                            Text(
+                              'пропустить',
+                              style: TextStyle(color: questTextColor),
+                            ),
+                          ],
+                        ),
+                      ),
+                      ElevatedButton(
+                        style: ButtonStyle(
+                          overlayColor: MaterialStateProperty.all(Colors.green),
+                        ),
+                        onPressed: () {},
+                        child: Column(
+                          children: [
+                            Icon(
+                              Icons.done,
+                              color: questTextColor,
+                            ),
+                            Text(
+                              'принять',
+                              style: TextStyle(color: questTextColor),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ],
               ),
             ),
             Column(
